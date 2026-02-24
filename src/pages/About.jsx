@@ -23,7 +23,7 @@ export default function About() {
           >
             <p className="section-label">About Me</p>
             <h1 className="font-display text-4xl md:text-5xl font-bold text-cream-50">
-              Trias Aldi
+              A curious person and a lifelong learner
             </h1>
             <div className="mt-4 h-px w-20 bg-gradient-to-r from-sage-600 to-transparent" />
           </motion.div>
@@ -95,10 +95,10 @@ export default function About() {
                     <span className="text-cream-50 font-medium">
                       Trias Aldi Prasetia
                     </span>
-                    , mahasiswa Teknik Industri di{" "}
+                    , mahasiswa Teknologi Rekayasa Peraangkat Lunak{" "}
                     <span className="text-sage-400">IPB University</span>. Saya
-                    memiliki minat yang kuat di bidang pengembangan organisasi,
-                    manajemen sumber daya manusia, dan teknologi.
+                    memiliki minat yang kuat di bidang manajemen sumber daya
+                    manusia, dan teknologi.
                   </p>
                   <p>
                     Sebagai bagian dari{" "}
@@ -133,29 +133,33 @@ export default function About() {
               {/* Favorite Club */}
               <motion.div {...fadeUp(0.25)}>
                 <p className="section-label">Favorite Club</p>
-                <div className="flex items-center gap-5 p-5 rounded-xl bg-ink-800/70 border border-ink-700 hover:border-ink-600 transition-colors">
-                  {/* Manchester United Badge Placeholder */}
-                  <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-red-900 to-red-950 border border-red-800/50 flex items-center justify-center shrink-0">
-                    <span className="text-2xl">⚽</span>
+                <div className="flex items-center gap-5 p-5 rounded-xl bg-ink-800/70 border border-ink-700 hover:border-blue-600 transition-colors">
+                  <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-blue-800 to-blue-950 border border-blue-700/50 flex items-center justify-center shrink-0">
+                    <img
+                      src="/Chelsea_Logo.png"
+                      alt="Chelsea Logo"
+                      className="w-10 h-10 object-contain"
+                    />
                   </div>
+
                   <div>
                     <p className="font-display text-lg font-semibold text-cream-100">
-                      Manchester United
+                      Chelsea FC
                     </p>
+
                     <p className="font-body text-sm text-ink-500 mt-0.5">
-                      English Premier League · "Glory Glory Man United"
+                      English Premier League · "Keep The Blue Flag Flying High"
                     </p>
+
                     <div className="flex gap-1 mt-2">
-                      {["Red Devil", "Theatre of Dreams", "Old Trafford"].map(
-                        (tag) => (
-                          <span
-                            key={tag}
-                            className="font-mono text-xs px-2 py-0.5 rounded bg-red-900/30 border border-red-900/50 text-red-400"
-                          >
-                            {tag}
-                          </span>
-                        )
-                      )}
+                      {["The Blues", "Stamford Bridge", "London"].map((tag) => (
+                        <span
+                          key={tag}
+                          className="font-mono text-xs px-2 py-0.5 rounded bg-blue-900/30 border border-blue-900/50 text-blue-400"
+                        >
+                          {tag}
+                        </span>
+                      ))}
                     </div>
                   </div>
                 </div>

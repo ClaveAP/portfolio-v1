@@ -1,46 +1,46 @@
-import { motion } from 'framer-motion'
-import PageWrapper from '../components/PageWrapper'
-import ThreeViewer from '../components/ThreeViewer'
-import SocialIcons from '../components/SocialIcons'
-import { Briefcase, Trophy } from 'lucide-react'
+import { motion } from "framer-motion";
+import PageWrapper from "../components/PageWrapper";
+import ThreeViewer from "../components/ThreeViewer";
+import SocialIcons from "../components/SocialIcons";
+import { Briefcase, Trophy } from "lucide-react";
 
 const experience = [
   {
-    period: 'Mar 2025 – Feb 2026',
-    role: 'Human Capital',
-    org: 'Do Well Do Good Future Leaders – IPB University',
+    period: "Mar 2025 – Feb 2026",
+    role: "Human Capital",
+    org: "Do Well Do Good Future Leaders – IPB University",
   },
   {
-    period: 'Oct 2025 – Present',
-    role: 'Core Team – Human Capital',
-    org: 'Google Developers Group on Campus IPB University',
+    period: "Oct 2025 – Present",
+    role: "Core Team – Human Capital",
+    org: "Google Developers Group on Campus IPB University",
   },
-]
+];
 
 const awards = [
   {
-    title: '1st Place — National Competition Pelita Islami 2025',
-    org: 'Poltekkes Kemenkes Surakarta',
+    title: "1st Place — National Competition Pelita Islami 2025",
+    org: "Poltekkes Kemenkes Surakarta",
   },
   {
-    title: '1st Place — National SDGS Essay Competition',
-    org: 'Universitas Harkat Negeri',
+    title: "1st Place — National SDGS Essay Competition",
+    org: "Universitas Harkat Negeri",
   },
   {
-    title: '1st Place — National Essay Festival PAUD 2025',
-    org: 'Universitas Negeri Jakarta',
+    title: "1st Place — National Essay Festival PAUD 2025",
+    org: "Universitas Negeri Jakarta",
   },
   {
-    title: 'Awardee BSI Scholarship',
-    org: '',
+    title: "Awardee BSI Scholarship",
+    org: "",
   },
-]
+];
 
 const fadeUp = (delay = 0) => ({
   initial: { opacity: 0, y: 30 },
   animate: { opacity: 1, y: 0 },
   transition: { duration: 0.7, delay, ease: [0.22, 1, 0.36, 1] },
-})
+});
 
 export default function Home() {
   return (
@@ -49,7 +49,6 @@ export default function Home() {
       <section className="min-h-screen flex items-center pt-16 overflow-hidden">
         <div className="max-w-7xl mx-auto px-6 md:px-12 w-full py-20">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-
             {/* Left: Text Content */}
             <div className="flex flex-col gap-8">
               {/* Social Icons */}
@@ -57,14 +56,18 @@ export default function Home() {
 
               {/* Name */}
               <div>
-                <motion.p {...fadeUp(0.1)} className="section-label">Portfolio</motion.p>
+                <motion.p {...fadeUp(0.1)} className="section-label">
+                  Portfolio
+                </motion.p>
                 <motion.h1
                   {...fadeUp(0.2)}
                   className="font-display text-4xl md:text-5xl xl:text-6xl font-bold leading-tight"
                 >
-                  Hi, I'm{' '}
+                  Hi, I'm{" "}
                   <span className="text-gradient block mt-1">
-                    Trias Aldi<br />Prasetia
+                    Trias Aldi
+                    <br />
+                    Prasetia
                   </span>
                 </motion.h1>
               </div>
@@ -74,7 +77,7 @@ export default function Home() {
                 <div className="flex items-center gap-3">
                   <span className="w-1 h-1 rounded-full bg-sage-500" />
                   <p className="font-body text-cream-300 text-base">
-                    Teknik Industri
+                    Software Engineering Technology '24
                   </p>
                 </div>
                 <div className="flex items-center gap-3">
@@ -98,7 +101,11 @@ export default function Home() {
             <motion.div
               initial={{ opacity: 0, scale: 0.85 }}
               animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.9, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
+              transition={{
+                duration: 0.9,
+                delay: 0.3,
+                ease: [0.22, 1, 0.36, 1],
+              }}
               className="h-[420px] md:h-[520px] relative"
             >
               {/* Glow effect */}
@@ -207,13 +214,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-      {/* Footer strip */}
-      <div className="border-t border-ink-800 py-8 text-center">
-        <p className="font-mono text-xs text-ink-600 tracking-wider">
-          © 2025 Trias Aldi Prasetia — Built with React & Three.js
-        </p>
-      </div>
     </PageWrapper>
-  )
+  );
 }
