@@ -32,7 +32,6 @@ export default function About() {
             {/* Left — Photo */}
             <motion.div {...fadeUp(0.1)} className="relative">
               <div className="relative w-full aspect-[3/4] max-w-md mx-auto lg:mx-0 rounded-2xl overflow-hidden bg-ink-800 border border-ink-700">
-                {/* Placeholder foto — ganti src dengan foto Anda */}
                 <div className="w-full h-full flex flex-col items-center justify-center gap-4 bg-gradient-to-br from-ink-800 to-ink-700">
                   <div className="w-24 h-24 rounded-full bg-ink-600 border-2 border-ink-500 flex items-center justify-center">
                     <svg

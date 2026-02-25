@@ -1,18 +1,19 @@
-import { Suspense, useRef } from 'react'
-import { Canvas, useFrame } from '@react-three/fiber'
-import { OrbitControls, useGLTF, Environment, Float } from '@react-three/drei'
-import { motion } from 'framer-motion'
+import { Suspense, useRef } from "react";
+import { Canvas, useFrame } from "@react-three/fiber";
+import { OrbitControls, useGLTF, Environment, Float } from "@react-three/drei";
+import { motion } from "framer-motion";
 
 // Placeholder 3D shape while GLB is not provided
 function FloatingGeometry() {
-  const meshRef = useRef()
+  const meshRef = useRef();
 
   useFrame((state) => {
     if (meshRef.current) {
-      meshRef.current.rotation.y = state.clock.elapsedTime * 0.3
-      meshRef.current.rotation.x = Math.sin(state.clock.elapsedTime * 0.5) * 0.15
+      meshRef.current.rotation.y = state.clock.elapsedTime * 0.3;
+      meshRef.current.rotation.x =
+        Math.sin(state.clock.elapsedTime * 0.5) * 0.15;
     }
-  })
+  });
 
   return (
     <Float speed={2} rotationIntensity={0.5} floatIntensity={0.8}>
@@ -38,7 +39,7 @@ function FloatingGeometry() {
         />
       </mesh>
     </Float>
-  )
+  );
 }
 
 // GLB Model loader - uncomment when you have the GLB file
@@ -61,8 +62,16 @@ export default function ThreeViewer({ glbPath }) {
         gl={{ antialias: true, alpha: true }}
       >
         <ambientLight intensity={0.4} />
-        <directionalLight position={[5, 5, 5]} intensity={1.2} color="#e8b56a" />
-        <directionalLight position={[-5, -2, -5]} intensity={0.3} color="#8fa888" />
+        <directionalLight
+          position={[5, 5, 5]}
+          intensity={1.2}
+          color="#e8b56a"
+        />
+        <directionalLight
+          position={[-5, -2, -5]}
+          intensity={0.3}
+          color="#8fa888"
+        />
         <Suspense fallback={null}>
           <Environment preset="city" />
           {/* When you add GLB: <Model url="/your-model.glb" /> */}
@@ -83,5 +92,5 @@ export default function ThreeViewer({ glbPath }) {
         </div>
       )}
     </motion.div>
-  )
+  );
 }
